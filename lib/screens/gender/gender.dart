@@ -91,6 +91,7 @@ class _GenderState extends State<Gender> {
                 ? null
                 : () {
                     GenderProvider().setGender(selectedIndex!);
+                    Navigator.pushNamed(context, "/gameSelection");
                   },
             text: "Continue",
           ),

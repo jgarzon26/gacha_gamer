@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gacha_gamer/screens/game_selection/game_selection.dart';
 import 'package:gacha_gamer/screens/gender/gender.dart';
 import 'package:gacha_gamer/screens/home/home.dart';
 import 'package:gacha_gamer/screens/login/login_main.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         '/welcome': (context) => const Welcome(),
         '/nameInput': (context) => const NameInput(),
         '/ageInput': (context) => const AgeInput(),
-        '/gender': (context) => Gender(),
+        '/gender': (context) => const Gender(),
+        '/gameSelection': (context) => const GameSelection(),
       },
     );
   }
