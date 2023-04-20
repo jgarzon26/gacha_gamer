@@ -3,6 +3,7 @@ import 'package:gacha_gamer/constants.dart';
 
 ThemeData buildDefaultTheme(){
   return ThemeData(
+    scaffoldBackgroundColor: kSecondaryColor,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: kSecondaryColor,
@@ -40,7 +41,7 @@ ThemeData buildDefaultTheme(){
       ),
       bodyLarge: TextStyle(
         fontSize: 15,
-        color: kTextLightColor2,
+        color: kTextLightColor,
       ),
     ),
     inputDecorationTheme: const InputDecorationTheme(
