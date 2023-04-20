@@ -28,7 +28,7 @@ class Welcome extends StatelessWidget {
           children: [
             const Spacer(),
             Text(
-              "Welcome to Gacha Gamer",
+              "Welcome to Gotcha",
               style: Theme.of(context).textTheme.displayMedium,
               ),
             Text(

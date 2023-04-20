@@ -27,7 +27,7 @@ class LoginMain extends StatelessWidget {
                 width: 100,
               ),
               Text(
-                'GACHA\nGAMER',
+                'GOTCHA',
                 style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   color: Colors.white,
                 ),
