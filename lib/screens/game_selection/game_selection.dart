@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gacha_gamer/components/proceed_button.dart';
 import 'package:gacha_gamer/data/list_of_games.dart';
 
 import '../../constants.dart';
+import '../home/Home.dart';
 
 class GameSelection extends StatefulWidget {
   const GameSelection({Key? key}) : super(key: key);
@@ -121,6 +123,26 @@ class _GameSelectionState extends State<GameSelection> {
                   ],
                 );
               },
+            ),
+            const SliverToBoxAdapter(
+              child: SizedBox(height: kDefaultPadding),
+            ),
+            SliverToBoxAdapter(
+              child: ProceedButton(
+                text: 'Continue',
+                onPressed: indexesSelected.isEmpty
+                    ? null
+                    : () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Home(
+                              selectedIds: indexesSelected,
+                            ),
+                          ),
+                        );
+                      },
+              ),
             ),
           ],
         ),

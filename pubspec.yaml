@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^2.0.5
   provider: ^6.0.5
   uuid: ^3.0.7
+  swipe_cards: ^2.0.0+1
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,8 @@ flutter:
   assets:
     - images/icons/
     - images/games/
+    - images/girls/
+    - images/boys/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
