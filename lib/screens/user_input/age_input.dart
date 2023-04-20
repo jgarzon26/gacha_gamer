@@ -7,6 +7,7 @@ class AgeInput extends StatelessWidget {
 
   void setAgeToProvider(BuildContext context, String age) {
     UserAgeProvider().setAge(int.parse(age));
+    Navigator.pushNamed(context, '/gender');
   }
 
   @override

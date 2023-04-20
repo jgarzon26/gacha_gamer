@@ -32,6 +32,12 @@ class _UserInputState extends State<UserInput> {
   }
 
   @override
+  void dispose() {
+    _inputController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
 
     const defaultPadding = EdgeInsets.symmetric(horizontal: 50);
