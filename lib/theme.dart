@@ -18,16 +18,27 @@ ThemeData buildDefaultTheme(){
         fontWeight: FontWeight.bold,
         color: kTextColor,
       ),
-      labelMedium: TextStyle(
-        fontSize: 14,
+      displayMedium: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.bold,
+        color: kTextColor,
+      ),
+      displaySmall: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.normal,
+        color: kTextColor,
+      ),
+      labelLarge: TextStyle(
+        fontSize: 20,
         fontWeight: FontWeight.bold,
         color: kTextLightColor,
       ),
-      bodyLarge: TextStyle(
-        fontSize: 15,
-        color: kTextLightColor2,
+      labelMedium: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.normal,
+        color: kTextLightColor,
       ),
-      bodySmall: TextStyle(
+      bodyLarge: TextStyle(
         fontSize: 15,
         color: kTextLightColor2,
       ),

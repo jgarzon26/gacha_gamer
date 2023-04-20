@@ -8,6 +8,11 @@ class LoginMain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    gotoWelcome() {
+      Navigator.pushNamed(context, '/welcome');
+    }
+
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: SafeArea(
@@ -28,24 +33,28 @@ class LoginMain extends StatelessWidget {
                 ),
               ),
               const Spacer(flex: 3,),
-              Text(
-                'By clicking Log in, you agree with our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy',
-                style: Theme.of(context).textTheme.bodyLarge,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10,),
+                child: Text(
+                  'By clicking Log in, you agree with our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                  textAlign: TextAlign.center,
+                ),
               ),
               LoginTileButton(
                 title: 'Google',
                 imgSrc: 'images/icons/google.svg',
-                onPressed: () {},
+                onPressed: gotoWelcome,
               ),
               LoginTileButton(
                 title: 'Facebook',
                 imgSrc: 'images/icons/facebook.svg',
-                onPressed: () {},
+                onPressed: gotoWelcome,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: ElevatedButton(
-                  onPressed: (){},
+                  onPressed: gotoWelcome,
                   child: ListTile(
                     leading: const Icon(
                       Icons.phone,
