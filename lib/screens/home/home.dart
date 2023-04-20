@@ -3,8 +3,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gacha_gamer/constants.dart';
 import 'package:gacha_gamer/data/NavHomeIcons.dart';
 import 'package:gacha_gamer/data/profiles_girl.dart';
+import 'package:gacha_gamer/providers/gender_provider.dart';
 import 'package:gacha_gamer/screens/home/pages/match_page/match_page.dart';
 import 'package:swipe_cards/swipe_cards.dart';
+
+import '../../data/profiles_boy.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key, required this.selectedIds}) : super(key: key);
@@ -23,17 +26,33 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    for (int i = 0; i < profilesGirl.length; i++) {
-      for (int j = 0; j < widget.selectedIds.length; j++) {
-        if (widget.selectedIds.contains(profilesGirl[i]["likesID"][j])) {
+    List<Map<String, dynamic>> profiles;
+
+    switch (GenderProvider().value) {
+      case GenderSelect.female:
+        profiles = profilesGirl;
+        break;
+      case GenderSelect.male:
+        profiles = profilesBoy;
+        break;
+      case GenderSelect.both:
+        profiles = [...profilesGirl, ...profilesBoy];
+        break;
+    }
+
+    for (int i = 0; i < profiles.length; i++) {
+      for (int j = 0; j < profiles[i]['likesID'].length; j++) {
+        if (widget.selectedIds.contains(profiles[i]["likesID"][j])) {
           _swipeItems.add(
             SwipeItem(
               content: MatchPage(
                 index: i,
+                profiles: profiles,
               ),
               likeAction: () {},
             ),
           );
+          break;
         }
       }
     }

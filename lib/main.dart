@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: buildDefaultTheme(),
       routes: {
         //'/': (context) => const LoginMain(),
-        '/': (context) => const GameSelection(),
+        '/': (context) => const Gender(),
         '/welcome': (context) => const Welcome(),
         '/nameInput': (context) => const NameInput(),
         '/ageInput': (context) => const AgeInput(),

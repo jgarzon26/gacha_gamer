@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../../../data/list_of_games.dart';
-import '../../../../data/profiles_girl.dart';
 
 class MatchPage extends StatelessWidget {
   const MatchPage({
     super.key,
     required this.index,
+    required this.profiles,
   });
 
   final int index;
+  final List<Map<String, dynamic>> profiles;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class MatchPage extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(40),
             child: Image.asset(
-              profilesGirl[index]['img'],
+              profiles[index]['img'],
               fit: BoxFit.cover,
             ),
           ),
@@ -35,7 +36,7 @@ class MatchPage extends StatelessWidget {
                 RichText(
                     text: TextSpan(children: [
                   TextSpan(
-                    text: profilesGirl[index]['name'],
+                    text: profiles[index]['name'],
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 30,
@@ -43,7 +44,7 @@ class MatchPage extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: ', ${profilesGirl[index]['age']}',
+                    text: ', ${profiles[index]['age']}',
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 30,
@@ -69,10 +70,9 @@ class MatchPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Wrap(
-                  children: List.generate(profilesGirl[index]['likesID'].length,
-                      (index) {
-                    int indexOfGame =
-                        profilesGirl[this.index]['likesID'][index];
+                  children:
+                      List.generate(profiles[index]['likesID'].length, (index) {
+                    int indexOfGame = profiles[this.index]['likesID'][index];
                     return Container(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 10,
