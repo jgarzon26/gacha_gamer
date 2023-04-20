@@ -5,11 +5,11 @@ ThemeData buildDefaultTheme(){
   return ThemeData(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: kSecondaryColor,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(50)),
         ),
-        padding: const EdgeInsets.all(defaultPadding),
+        padding: const EdgeInsets.all(kDefaultPadding),
       ),
     ),
     textTheme: const TextTheme(
@@ -21,6 +21,14 @@ ThemeData buildDefaultTheme(){
       labelMedium: TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.bold,
+        color: kTextLightColor,
+      ),
+      bodyLarge: TextStyle(
+        fontSize: 15,
+        color: kTextLightColor2,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 15,
         color: kTextLightColor2,
       ),
     ),
