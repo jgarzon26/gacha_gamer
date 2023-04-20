@@ -2,16 +2,20 @@ import 'package:flutter/material.dart';
 
 class ProceedButton extends StatelessWidget {
   const ProceedButton({
-    super.key, required this.onPressed, required this.text,
+    super.key,
+    required this.onPressed,
+    required this.text,
   });
 
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String text;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 25,),
+      padding: const EdgeInsets.symmetric(
+        vertical: 25,
+      ),
       child: FractionallySizedBox(
         widthFactor: 0.9,
         child: ElevatedButton(
@@ -22,9 +26,9 @@ class ProceedButton extends StatelessWidget {
           child: Text(
             text.toUpperCase(),
             style: Theme.of(context).textTheme.labelMedium?.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
           ),
         ),
       ),
