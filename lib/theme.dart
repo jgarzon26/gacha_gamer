@@ -3,13 +3,14 @@ import 'package:gacha_gamer/constants.dart';
 
 ThemeData buildDefaultTheme(){
   return ThemeData(
+    scaffoldBackgroundColor: kSecondaryColor,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: kSecondaryColor,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(50)),
         ),
-        padding: const EdgeInsets.all(defaultPadding),
+        padding: const EdgeInsets.all(kDefaultPadding),
       ),
     ),
     textTheme: const TextTheme(
@@ -18,10 +19,29 @@ ThemeData buildDefaultTheme(){
         fontWeight: FontWeight.bold,
         color: kTextColor,
       ),
-      labelMedium: TextStyle(
-        fontSize: 14,
+      displayMedium: TextStyle(
+        fontSize: 25,
         fontWeight: FontWeight.bold,
-        color: kTextLightColor2,
+        color: kTextColor,
+      ),
+      displaySmall: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.normal,
+        color: kTextColor,
+      ),
+      labelLarge: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: kTextLightColor,
+      ),
+      labelMedium: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.normal,
+        color: kTextLightColor,
+      ),
+      bodyLarge: TextStyle(
+        fontSize: 15,
+        color: kTextLightColor,
       ),
     ),
     inputDecorationTheme: const InputDecorationTheme(
