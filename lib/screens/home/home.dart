@@ -3,9 +3,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gacha_gamer/data/NavHomeIcons.dart';
 import 'package:gacha_gamer/data/profiles_girl.dart';
 import 'package:gacha_gamer/providers/gender_provider.dart';
+import 'package:gacha_gamer/screens/home/pages/chat_page/chat_page.dart';
 import 'package:gacha_gamer/screens/home/pages/likes_page/likes_page.dart';
 import 'package:gacha_gamer/screens/home/pages/match_page/match_page.dart';
 import 'package:gacha_gamer/screens/home/pages/match_page/widgets/profile_card.dart';
+import 'package:gacha_gamer/screens/home/pages/user_account/account_page.dart';
 import 'package:swipe_cards/swipe_cards.dart';
 
 import '../../data/profiles_boy.dart';
@@ -100,6 +102,8 @@ class _HomeState extends State<Home> {
           LikePage(
             profiles: profiles,
           ),
+          const ChatPage(),
+          const AccountPage(),
         ],
       ),
     );
