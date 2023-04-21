@@ -51,7 +51,18 @@ class _HomeState extends State<Home> {
                 index: i,
                 profiles: profiles,
               ),
-              likeAction: () {},
+              likeAction: () {
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Icon(
+                    Icons.check,
+                    color: Colors.white,
+                  ),
+                );
+              },
             ),
           );
           break;
