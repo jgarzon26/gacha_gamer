@@ -15,7 +15,7 @@ class NameInput extends StatelessWidget {
     return UserInput(
       titlePage: "What is your name?",
       hintText: "Name",
-      textFieldDesc: "This is how it will appear in Gacha Gamer and you will not be able to change it",
+      textFieldDesc: "This is how it will appear in Gotcha and you will not be able to change it",
       buttonText: "Next",
       setNameToProvider: setNameToProvider,
     );
